@@ -13,12 +13,14 @@ public class ExplicitlyLoadedActivity extends Activity {
 
 	static private final String TAG = "Lab-Intents";
 
+	public static final String KEY_GET_TEXT = "get_text_key";
+
 	private EditText mEditText;
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
+
 		setContentView(R.layout.explicitly_loaded_activity);
 
 		// Get a reference to the EditText field
@@ -34,25 +36,23 @@ public class ExplicitlyLoadedActivity extends Activity {
 			public void onClick(View v) {
 
 				enterClicked();
-			
+
 			}
 		});
 
 	}
 
 	// Sets result to send back to calling Activity and finishes
-	
+
 	private void enterClicked() {
 
-		Log.i(TAG,"Entered enterClicked()");
-		
-		// TODO - Save user provided input from the EditText field
+		Log.i(TAG, "Entered enterClicked()");
 
-		// TODO - Create a new intent and save the input from the EditText field as an extra
-		
-		// TODO - Set Activity's result with result code RESULT_OK
-		
-		// TODO - Finish the Activity
+		Intent intent = new Intent();
+		intent.putExtra(KEY_GET_TEXT, mEditText.getText().toString());
 
+		setResult(RESULT_OK, intent);
+
+		finish();
 	}
 }

@@ -12,7 +12,7 @@ public class ToDoItem {
 	public static final String ITEM_SEP = System.getProperty("line.separator");
 
 	public enum Priority {
-		LOW, MED, HIGH
+		LOW, MED, HIGH;
 	};
 
 	public enum Status {
@@ -87,7 +87,7 @@ public class ToDoItem {
 		mDate = date;
 	}
 
-	// Take a set of String data values and 
+	// Take a set of String data values and
 	// package them for transport in an Intent
 
 	public static void packageIntent(Intent intent, String title,
@@ -97,7 +97,7 @@ public class ToDoItem {
 		intent.putExtra(ToDoItem.PRIORITY, priority.toString());
 		intent.putExtra(ToDoItem.STATUS, status.toString());
 		intent.putExtra(ToDoItem.DATE, date);
-	
+
 	}
 
 	public String toString() {

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Common -->
+    <string name="app_name">Modern Art UI</string>
+
+    <!-- Menu -->
+    <string name="more_information">More Information</string>
+
+    <!-- Dialogs -->
+    <string name="visit_moma">Visit MOMA</string>
+    <string name="not_now">Not now</string>
+    <string name="moma_tl">Inspired by the works of artists such as Piet Mondrian and Ben Nicholso</string>
+    <string name="moma_mes">Click below to learn more</string>
+
+</resources>

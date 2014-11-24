@@ -1,4 +1,4 @@
-package course.labs.locationlab;
+package course.labs.contentproviderlab;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -37,7 +37,9 @@ public class PlaceDownloaderTask extends AsyncTask<Location, Void, PlaceRecord> 
 	// Log TAG
 	private static final String TAG = "PlaceDownloaderTask";
 
-	private static String USERNAME = "fastwow";
+	// Optional TODO - Put your www.geonames.org account name here if you want to
+	// use the geonames.org web service. To use this service, you must register for a free account.
+	private static String USERNAME = "YOUR_ACCOUNT_NAME";
 
 	private HttpURLConnection mHttpUrl;
 	private WeakReference<PlaceViewActivity> mParent;
@@ -97,7 +99,8 @@ public class PlaceDownloaderTask extends AsyncTask<Location, Void, PlaceRecord> 
 			place = new PlaceRecord();
 			place.setLocation(location[0]);
 			place.setFlagBitmap(sStubBitmap);
-
+			place.setFlagUrl("file://stub.gif");
+			
 			if (place.intersects(sMockLoc1)) {
 				place.setCountryName(sMockCountryName1);
 				place.setPlace(sMockPlaceName1);
